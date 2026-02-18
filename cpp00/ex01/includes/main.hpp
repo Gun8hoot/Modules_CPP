@@ -10,4 +10,8 @@
 
 // --- prototypes ---
 void  commande(std::string line, PhoneBook &phonebook);
+void  show_contact(PhoneBook phonebook);
+void  add(PhoneBook &phonebook);
+void  search(PhoneBook phonebook);
+
 #endif

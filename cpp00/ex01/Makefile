@@ -6,7 +6,9 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3 -I.
 SRCS = sources/main.cpp\
 	   sources/class/PhoneBook.cpp\
 	   sources/class/Contact.cpp\
-	   sources/command.cpp\
+	   sources/command/add.cpp\
+	   sources/command/search.cpp\
+	   sources/command.cpp
 
 OBJS = $(SRCS:%.cpp=%.o)
 

@@ -10,19 +10,22 @@
 //	|          |          |          |         |
 //	+----------+----------+----------+---------+
 
-void  append_contact(PhoneBook phonebook)
+static void  append_contact(PhoneBook &phonebook)
 {
-	PhoneBook tmp;
+	Contact tmp;
 
 	tmp.adding_contact();
+	for (int i = phonebook.recorded - 2; i >= 0; i--)
+		phonebook.contact[i + 1] = phonebook.contact[i];
+	phonebook.contact[0] = tmp;
 }
 
-void  add(PhoneBook phonebook)
+void  add(PhoneBook &phonebook)
 {
 	if (phonebook.recorded < 8)
 	{
 		phonebook.contact[phonebook.recorded].adding_contact();
-		phonebook.recorded++;
+		phonebook.recorded += 1;
 	}
 	else
 		append_contact(phonebook);
