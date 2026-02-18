@@ -8,6 +8,7 @@ class PhoneBook
   public:
 		int recorded;
 		Contact contact[8];
+		PhoneBook(void);
 };
 
 #endif

@@ -20,10 +20,10 @@ $(NAME): $(OBJS)
 	$(CPPC) $(OBJS) -o $@
 
 clean :
-	rm -f $(NAME)
+	rm -f $(OBJS)
 
 fclean : clean 
-	rm -f $(OBJS)
+	rm -f $(NAME)
 
 re : fclean $(NAME)
 

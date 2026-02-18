@@ -9,5 +9,5 @@
 #include "includes/class/Contact.hpp"
 
 // --- prototypes ---
-void  commande(std::string line, PhoneBook phonebook);
+void  commande(std::string line, PhoneBook &phonebook);
 #endif

@@ -1,10 +1,5 @@
 #include "includes/main.hpp"
 
-void  show_contact(PhoneBook phonebook)
-{
-	std::cout << phonebook.contact[0].first_name;
-}
-
 int main(void)
 {
 	std::string line;
@@ -13,7 +8,7 @@ int main(void)
 	while (1)
 	{
 		std::cout << ">> ";
-		std::getline(std::cin, line);
+		std::cin >> line;
 		if (line.compare("EXIT") == 0 || std::cin.eof() == 1)
 			break ;
 		commande(line, phonebook);

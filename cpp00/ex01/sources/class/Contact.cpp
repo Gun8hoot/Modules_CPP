@@ -1,8 +1,8 @@
 
 #include "includes/main.hpp"
 
-Contact::adding_contact(void)
-	{
+void Contact::adding_contact(void)
+{
 		std::cout << "Enter the first name of the contact you want add : ";
 		std::cin >> this->first_name;
 
@@ -19,4 +19,6 @@ Contact::adding_contact(void)
 		std::cin >> this->secret;
 
 		std::cout << "The contact have been added !" << std::endl;
-	}
+}
+
+
