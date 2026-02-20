@@ -2,14 +2,14 @@
 
 int main(void)
 {
-	Zombie *zombie1 = newZombie("goffy");
-	Zombie *zombie2 = newZombie("aaa");
-	Zombie *zombie3 = newZombie("oppp");
-
+	Zombie *first = newZombie("goffy");
+	Zombie *second = newZombie("sora");
+	first->announce();
+	second->announce();
 	randomChump("tmp1");
 	randomChump("tmp2");
-	(void)zombie1;
-	(void)zombie2;
-	(void)zombie3;
+
+	delete first;
+	delete second;
 	return (0);
 }
