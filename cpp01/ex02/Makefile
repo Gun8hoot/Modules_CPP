@@ -1,11 +1,9 @@
-NAME = horde
+NAME = hi_this_is_brain
 
 CPPC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3 -I.
 
-SRCS = zombieHorde.cpp\
-	   main.cpp\
-	   class/Zombie.cpp
+SRCS = main.cpp
 
 OBJS = $(SRCS:%.cpp=%.o)
 

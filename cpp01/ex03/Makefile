@@ -1,11 +1,12 @@
-NAME = horde
+NAME = unnecessary_violence
 
 CPPC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3 -I.
 
-SRCS = zombieHorde.cpp\
-	   main.cpp\
-	   class/Zombie.cpp
+SRCS = main.cpp\
+			 class/Weapon.cpp\
+			 class/HumanA.cpp\
+			 class/HumanB.cpp
 
 OBJS = $(SRCS:%.cpp=%.o)
 

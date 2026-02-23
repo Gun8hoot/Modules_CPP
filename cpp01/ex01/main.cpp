@@ -2,5 +2,18 @@
 
 int main(void)
 {
-	zombieHorde(5, "Phil");
+  Zombie *horde;
+	horde = zombieHorde(5, "Ed");
+  if (!horde)
+    return (1);
+  for (int i = 0; i < 5; i++)
+  {
+    horde[i].announce();
+  }
+  for (int i = 0; i < 5; i++)
+  {
+    horde[i].~Zombie();
+  }
+  ::operator delete(horde);
+  return (0);
 }
