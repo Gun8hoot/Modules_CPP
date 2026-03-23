@@ -3,7 +3,7 @@
 
 //     Index      f_name     l_name     nick
 //	+----------+----------+----------+---------+
-//	|          |          |          | 
+//	|          |          |          |		   |
 //	+----------+----------+----------+---------+
 //	|          |          |          |         |
 //	+----------+----------+----------+---------+
@@ -15,9 +15,11 @@ static void  append_contact(PhoneBook &phonebook)
 	Contact tmp;
 
 	tmp.adding_contact();
-	for (int i = phonebook.recorded - 2; i >= 0; i--)
-		phonebook.contact[i + 1] = phonebook.contact[i];
-	phonebook.contact[0] = tmp;
+	for (int i = 0; i <= phonebook.recorded - 2; i++)
+	{
+		phonebook.contact[i] = phonebook.contact[i + 1];
+	}
+	phonebook.contact[7] = tmp;
 }
 
 void  add(PhoneBook &phonebook)

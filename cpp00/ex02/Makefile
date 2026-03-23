@@ -1,14 +1,10 @@
-NAME = phonebook
+NAME = dream
 
 CPPC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3 -I.
 
-SRCS = sources/main.cpp\
-		sources/lib.cpp\
-	   sources/class/PhoneBook.cpp\
-	   sources/class/Contact.cpp\
-	   sources/command/add.cpp\
-	   sources/command/search.cpp\
+SRCS = Account.cpp\
+		tests.cpp
 
 OBJS = $(SRCS:%.cpp=%.o)
 
