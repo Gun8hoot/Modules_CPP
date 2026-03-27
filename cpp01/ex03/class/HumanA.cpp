@@ -1,15 +1,16 @@
 #include "class/HumanA.hpp"
 
-HumanA::HumanA(std::string name; std::string & weapon) {
+HumanA::HumanA(std::string name, Weapon weapon) : name(name), weapon(weapon)
+{
   this->name = name;
-  this->type = weapon;
+  this->weapon.setType(weapon.getType());
 }
 
-void HumanA::setWeapon(Weapon weapon) { this->weapon = weapon.type }
+void HumanA::setWeapon(Weapon weapon) { this->weapon = weapon; }
 
-void attack(void) {
-	if (this->weapon.getType().empty)
+void HumanA::attack(void) {
+	if (this->weapon.getType() != "")
 		std::cout << this->name << " cant attack without a weapon" << std::endl;
 	else
-		std::cout	<< this->name << " attacks with their " << this->type << std::endl;
+		std::cout	<< this->name << " attacks with their " << this->weapon.getType() << std::endl;
 }

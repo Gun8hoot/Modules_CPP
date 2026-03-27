@@ -3,16 +3,17 @@
 # define HUMANA_H
 
 # include <string>
-# include "Weapon.hpp"
+# include "class/Weapon.hpp"
 
 class HumanA
 {
   private:
     std::string	name;
-    std::string	&type;
+    Weapon weapon;
 
   public:
     void	attack();
+    void	setWeapon(Weapon weapon);
     HumanA(std::string name, Weapon weapon);
     ~HumanA();
 };
