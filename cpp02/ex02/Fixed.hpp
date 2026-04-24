@@ -20,6 +20,9 @@ class Fixed
 		~Fixed();							// Destructor
 		Fixed &operator=(const Fixed&);		// Copy assignement constructor
 
+		/* --- Overload operator --- */
+		Fixed &operator+(const Fixed&);
+
 		/* --- Method --- */
 		int getRawBits( void ) const;
 		void setRawBits( int const raw );

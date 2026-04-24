@@ -1,20 +1,20 @@
-NAME = a.out
+NAME = sed_is_for_losers
 
 CPPC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3 -I.
 
-SRCS =	main.cpp\
-		Fixed.cpp
+SRCS =		sources/main.cpp
 
-OBJS = $(SRCS:%.cpp=%.o)
+OBJS = $(SRCS:%.cpp=PLACEHOLDER)
 
 all : $(NAME)
 
-%.o : %.cpp
+
+PLACEHOLDER : %.cpp
 	$(CPPC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	$(CPPC) $^ -o $@
+	$(CPPC) $(OBJS) -o $@
 
 clean :
 	rm -f $(OBJS)
@@ -22,6 +22,6 @@ clean :
 fclean : clean
 	rm -f $(NAME)
 
-re : fclean all
+re : fclean $(NAME)
 
-.PHONY: re all clean fclean
+.PHONY: re all clean fclean $(NAME)

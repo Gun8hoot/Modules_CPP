@@ -36,7 +36,7 @@ Fixed::Fixed(const int int_number)
 
 Fixed::Fixed(const float float_number)
 {
-	this->value = static_cast<int>(roundf(float_number * (1 << bits)));
+	this->value = static_cast<int>(lround(float_number * (1 << bits)));
 	std::cout << "Float constructor called" << std::endl;
 }
 
@@ -63,6 +63,12 @@ int Fixed::toInt( void ) const
 }
 
 /* --- Overload Operator --- */
+Fixed &operator+(const Fixed& f)
+{
+	this->
+	return (f.);
+}
+
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed)
 {
 	os << fixed.toFloat();
