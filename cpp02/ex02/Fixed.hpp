@@ -30,9 +30,9 @@ class Fixed
 		Fixed operator<=(const Fixed&);
 		Fixed operator==(const Fixed&);
 		Fixed operator!=(const Fixed&);
-		Fixed operator++(void);			// Pre-incrementation overload
+		Fixed operator++(void);				// Pre-incrementation overload
 		Fixed operator++(int);				// Post-incrementation overload
-		Fixed operator--(void);			// Pre-decrementation overload
+		Fixed operator--(void);				// Pre-decrementation overload
 		Fixed operator--(int);				// Post-decrementation overload
 
 		/* --- Method --- */
