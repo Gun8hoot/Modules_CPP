@@ -16,7 +16,6 @@ ClapTrap::ClapTrap(const ClapTrap &cpy)
 	this->_energy_point = cpy._energy_point;
 	this->_hit_point = cpy._hit_point;
 	std::cout << "ClapTrap \"" << this->getName() << "\" constructor called\n";
-
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap& cpy)
