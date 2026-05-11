@@ -9,10 +9,15 @@ void Zombie::announce(void)
 Zombie::~Zombie(void)
 {
 	std::cout << this->name << " have been killed !" << std::endl;
-  this->name = "";
+	this->name = "";
 }
 
-Zombie::Zombie(std::string name)
+Zombie::Zombie(void)
 {
-	this->name = name;
+	;
+}
+
+void	Zombie::setName(std::string newName)
+{
+	this->name = newName;
 }
