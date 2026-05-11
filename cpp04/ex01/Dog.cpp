@@ -3,18 +3,22 @@
 Dog::~Dog(void)
 {
 	std::cout << "Calling Dog destructor\n";
+	if (this->brain)
+		delete this->brain;
 }
 
 Dog::Dog(void) : Animal()
 {
 	this->type = "Dog";
-	std::cout << "Calling Dog destructor\n";
+	this->brain = new Brain;
+	std::cout << "Calling Dog constructor\n";
 }
 
 Dog::Dog(const Dog &cpy) : Animal(cpy)
 {
 	this->type = cpy.type;
-	std::cout << "Calling Dog destructor\n";
+	this->brain = cpy.brain;
+	std::cout << "Calling Dog constructor\n";
 }
 
 Dog	&Dog::operator=(const Dog &cpy)
@@ -22,8 +26,9 @@ Dog	&Dog::operator=(const Dog &cpy)
 	if (this != &cpy)
 	{
 		this->type = cpy.type;
+		this->brain = cpy.brain;
 	}
-	std::cout << "Calling Dog destructor\n";
+	std::cout << "Calling Dog constructor\n";
 	return (*this);
 }
 
