@@ -1,3 +1,2 @@
 CompileFlags:
-  Add:
-    - -I/home/gun8hoot/Documents/modules_cpp/cpp01/ex03
+	Add: [-xc, -Wall, -Wextra, -Werror, -I/home/nclavel/Documents/Modules_CPP/cpp01/ex03]

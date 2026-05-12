@@ -2,7 +2,7 @@
 
 HumanB::HumanB(std::string name) : name(name), weapon(NULL)
 {
-	this->name = name;
+	;
 }
 
 void  HumanB::setWeapon(Weapon *weapon)

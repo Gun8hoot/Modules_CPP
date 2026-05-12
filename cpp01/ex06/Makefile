@@ -4,7 +4,7 @@ CPPC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3 -I.
 
 SRCS =		sources/main.cpp\
-			sources/class/harl.cpp
+			sources/class/Harl.cpp
 
 OBJS = $(SRCS:%.cpp=%.o)
 

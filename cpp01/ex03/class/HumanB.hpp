@@ -17,4 +17,4 @@ class HumanB
     HumanB(std::string name);
 };
 
-#endif // !HUMANB_H
+#endif

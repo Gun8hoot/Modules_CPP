@@ -11,7 +11,9 @@ int main(int argc, char **argv)
 
 	if (argc != 4)
 	{
-		if (argc < 4)
+		if (argc == 1)
+			std::cout << "Usage:\t" << argv[0] << " <input_file> <str_to_replace> <str_that_replace>\n\tThen an new file named \"new_file\" is created\n";
+		else if (argc < 4)
 			std::cout << "[!] Missing arguments !\n";
 		else
 			std::cout << "[!] Too many arguments !\n";
@@ -26,7 +28,7 @@ int main(int argc, char **argv)
 	new_file.open("new_file", std::ios::trunc);
 	if (new_file.fail())
 	{
-		std::cout << "[!] Failed to open " << argv[1] << " !\n";
+		std::cout << "[!] Failed to create/open " << argv[1] << " !\n";
 		return (1);
 	}
 	str1 = argv[2];

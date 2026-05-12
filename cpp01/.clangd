@@ -1,3 +1,5 @@
 CompileFlags:
     Add:
-        - -I/home/gun8hoot/Documents/modules_cpp/cpp01
+        - -Wall -Wextra -Werror
+        - -std=c++98
+        - -I/home/nclavel/Documents/Modules_CPP/cpp01

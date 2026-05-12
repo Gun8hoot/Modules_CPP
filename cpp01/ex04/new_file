@@ -3,14 +3,14 @@ NAME = sed_is_for_losers
 CPPC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3 -I.
 
-SRCS =		sources/main.cpp
+SRCS =		sources/main.<ALL>
 
-OBJS = $(SRCS:%.cpp=PLACEHOLDER)
+OBJS = $(SRCS:%.<ALL>=%.o)
 
 all : $(NAME)
 
 
-PLACEHOLDER : %.cpp
+%.o : %.<ALL>
 	$(CPPC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
