@@ -14,7 +14,6 @@ void	clean(Animal **arr, int i)
 
 int	main(void)
 {
-
 	Animal **arr = new Animal*[10]();
 	for (int i = 0; i < 5; i++)
 	{
